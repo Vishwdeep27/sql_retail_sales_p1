@@ -17,3 +17,25 @@ This project is designed to demonstrate SQL skills and techniques typically used
 
 ## Project Structure
 
+### 1. Database Setup
+
+- **Database Creation**: The project starts by creating a database named p1_retail_db.
+- **Table Creation**: A table named retail_sales is created to store the sales data. The table structure includes columns for transaction ID, sale date, sale time, customer ID, gender, age, product category, quantity sold, price per unit, cost of goods sold (COGS), and total sale amount.
+
+create database if not exists sql_project_p1;
+use sql_project_p1;
+
+drop table if exists retail_sales;
+create table retail_sales (
+	transactions_id int primary key,	
+    sale_date date,
+    sale_time time,
+    customer_id	int,
+    gender	varchar(50),
+    age	int,
+    category varchar(15),	
+    quantiy	int,
+    price_per_unit	float,
+    cogs float,
+    total_sale float
+);
