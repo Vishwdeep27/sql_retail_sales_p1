@@ -69,13 +69,13 @@ where transactions_id is null
 
 The following SQL quaries were developed to answer specific business question:
 
-1. ##Write a SQL query to retreieve all columns for sales made on '2022-11-05'
+1. **Write a SQL query to retreieve all columns for sales made on '2022-11-05'**
 ```sql
 select * from retail_sales.turitorial_csv
 where sale_date = '05-11-2022';
 ```
 
-2. ##Write a SQL query to retrieve all transaction where the category is 'Clothing' and the quantity sold is more than 10 in the month of Nov-2022
+2. **Write a SQL query to retrieve all transaction where the category is 'Clothing' and the quantity sold is more than 10 in the month of Nov-2022**
 ```sql
 SELECT * 
 FROM retail_sales.turitorial_csv
@@ -84,7 +84,7 @@ WHERE category = 'Clothing'
   AND DATE_FORMAT(sale_date, '%m-%Y') = '11-2022';
 ```
 
-3. ##Write a SQL query to calculate the total sales (total_sale) for each category. 
+3. **Write a SQL query to calculate the total sales (total_sale) for each category.**
 ```sql
 select category, 
        sum(total_sale) as total_sales,
@@ -93,21 +93,21 @@ from retail_sales.turitorial_csv
 group by category;
 ```
 
-4. ##Write a SQL query to find the average age of customers who purchased items from the 'Beauty' category.
+4. **Write a SQL query to find the average age of customers who purchased items from the 'Beauty' category.**
 ```sql
 select round(avg(age),0) as age_of_customers
 from retail_sales.turitorial_csv
 where category = 'Beauty';
 ```
 
-5. ##Write a SQL query to find all transactions where the total_sale is greater than 1000. 
+5. **Write a SQL query to find all transactions where the total_sale is greater than 1000.**
 ```sql
 select transactions_id, total_sale
 from retail_sales.turitorial_csv
 where total_sale > '1000';
 ```
 
-6. ##Write a SQL query to find the total number of transactions (transactions_id) made by each gender in each category. 
+6. **Write a SQL query to find the total number of transactions (transactions_id) made by each gender in each category.**
 ```sql
 select category, gender, count(transactions_id)
 from retail_sales.turitorial_csv
@@ -115,7 +115,7 @@ group by category, gender
 order by 1;
 ```
 
-7. ##Write a SQL query to calculate the average sale for each month. Find out best selling month in each year                          imp
+7. **Write a SQL query to calculate the average sale for each month. Find out best selling month in each year**                          
 ```sql
 select 
        sale_year,
@@ -134,7 +134,7 @@ GROUP BY 1,2
 where ranks = 1;
 ```
 
-8. ##Write a SQL query to find the top 5 customers based on the highest tatal sales
+8. **Write a SQL query to find the top 5 customers based on the highest tatal sales**
 ```sql
 select customer_id, sum(total_sale) as total_sales
 from retail_sales.turitorial_csv
@@ -143,14 +143,14 @@ order by 2 desc
 limit 5;
 ```
 
-9. ##Write a SQL query to find the number of unique customers who purchased items from each category
+9. **Write a SQL query to find the number of unique customers who purchased items from each category**
 ```sql
 select category, count(distinct customer_id) as unique_customers
 from retail_sales.turitorial_csv
 group by 1;
 ```
 
-10. ##Write a SQL query to create each shift and number of orders (example Morning <=12, Afternon Between 12 & 17, Evening > 17)
+10. **Write a SQL query to create each shift and number of orders (example Morning <=12, Afternon Between 12 & 17, Evening > 17)**
 ```sql
 select *,
      case
