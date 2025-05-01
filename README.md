@@ -160,4 +160,4 @@ select *,
 	end as shift
 from retail_sales.turitorial_csv;
 ```
-
+## Conclusion
