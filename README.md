@@ -25,6 +25,7 @@ This project is designed to demonstrate SQL skills and techniques typically used
 create database if not exists sql_project_p1;
 use sql_project_p1;
 
+'''sql
 drop table if exists retail_sales;
 create table retail_sales (
 	transactions_id int primary key,	
