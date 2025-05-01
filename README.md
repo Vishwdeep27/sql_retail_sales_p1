@@ -40,3 +40,10 @@ create table retail_sales (
     cogs float,
     total_sale float
 );
+```
+### 2. Data Exploration & Cleaning
+
+```sql
+select count(*) as total_sale from retail_sales.turitorial_csv;
+select count(distinct customer_id) as total_sale from retail_sales.turitorial_csv;
+select count(distinct category) as total_sale from retail_sales.turitorial_csv;
