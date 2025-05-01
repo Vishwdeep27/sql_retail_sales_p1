@@ -47,3 +47,21 @@ create table retail_sales (
 select count(*) as total_sale from retail_sales.turitorial_csv;
 select count(distinct customer_id) as total_sale from retail_sales.turitorial_csv;
 select count(distinct category) as total_sale from retail_sales.turitorial_csv;
+
+select * from retail_sales.turitorial_csv
+where transactions_id is null
+	  or
+      sale_date is null
+      or
+      sale_time is null
+      or 
+      gender is null
+      or 
+      category is null
+      or 
+      quantiy is null
+      or
+      cogs is null
+      or
+      total_sale is null;
+```
